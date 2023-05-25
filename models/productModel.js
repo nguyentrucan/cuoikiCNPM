@@ -19,15 +19,15 @@ var productSchema = new mongoose.Schema({
     },
     brand:{
         type:String,
-        enum:["Nike", "Addidas", "Gucci"],
+        required:true,
     },
     price:{
         type:Number,
         required:true,
     },
     category:{
-        type:mongoose.Schema.Types.ObjectId,
-        ref:"Category",
+        type:String,
+        required:true,
     },
 
     quantity:{ 
@@ -43,7 +43,7 @@ var productSchema = new mongoose.Schema({
     },
     color:{
         type:String,
-        enum:["Black", "Brown", "Red"],
+        required:true,
     },
     ratings:[{
         star:Number,
